@@ -1,0 +1,16 @@
+!!!
+%html
+ %head
+
+  %title
+   Blackjack
+ %body
+  %aside#user-statistics-widget
+   %h2 Player Statistics
+   .test-name player name
+   .test-avatar avatar
+   .test-chip-count number of chips
+   .test-level level number
+   = link_to 'Edit', user_edit_path, :class => "test-edit-link"
+   / %a.test-edit-link{:href => "user_edit"}Edit
+  = yield

@@ -1,0 +1,18 @@
+%h1.test-lobby-header Lobby
+%p Welcome to the Blackjack Lobby!
+
+%h3 Game Tables
+
+%ul
+ %li
+  = link_to 'High Rollers Table', table_path('High Rollers Table'), :class => "test-high-rollers"
+  / %a.test-high-rollers#test-high-rollers{:href => "table?gametable='High Rollers Table'"} High Rollers Table
+  (Min bet = 100, Max = none)
+ %li
+  = link_to 'Intermediates Table', table_path('Intermediates Table'), :class => "test-intermediates"
+  / %a.test-intermediates{:href => "table?gametable='Intermediates Table'"} Intermediates Table
+  (Min bet = 50, Max = 100)
+ %li
+  = link_to 'Beginners Table', table_path('Beginners Table'), :class => "test-beginners"
+  / %a.test-beginners{:href => "table?gametable='Beginners Table'"} Beginners Table
+  (Min bet = 10, Max = 50)

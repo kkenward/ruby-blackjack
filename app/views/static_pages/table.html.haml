@@ -1,0 +1,27 @@
+:javascript
+ function startGame()
+ {
+  document.getElementById("playing-area").style.visibility = "visible";
+  document.getElementById("control-bar").style.visibility = "visible";
+  initializeGame();
+ }
+
+= link_to 'Back to Lobby', lobby_path, :class => "test-back-to-lobby"
+/%a.test-back-to-lobby{:href => "/static_pages/lobby"}Back to Lobby
+%h1.test-table-header #{@game_table}
+%p Ready to play Blackjack?
+%button.test-play-btn{ :type => "button", :onclick => 'startGame()' } PLAY!
+.test-dealer dealer
+%section#playing-area.test-playing-area{:style => "visibility: hidden;"}
+ %p This is the playing area
+ .test-dealer-card-area Dealer's cards
+ .test-player-card-area Player's cards
+ .test-player-icon player icon
+ .test-current-chip-count current chip count
+%section#control-bar.test-control-bar{:style => "visibility: hidden;"}
+ %p This is the control bar
+ .test-current-bet current bet
+ %button.test-hit-btn{ :type => "button", :onclick => 'hit()' } Hit
+ %button.test-stand-btn{ :type => "button", :onclick => 'stand()' } Stand
+ %button.test-double-down-btn{ :type => "button", :onclick => 'doubleDown()' } Double Down
+%footer This is a footer
